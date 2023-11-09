@@ -53,6 +53,7 @@ app.post("/cadastro", async function(req,res){
           break;
 
         case 'alterar':
+          produto.codigo = parseInt(req.body.txtCodigo);
           produto.descricao = req.body.txtDescricao;
           produto.preco = parseFloat(req.body.txtPreco);
           produto.qtde = parseInt(req.body.txtQuantidade);
