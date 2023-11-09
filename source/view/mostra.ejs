@@ -7,8 +7,16 @@
     <title>Document</title>
 </head>
 <body >
-    <h1>codigo: <%=codigo%></h1>
-
+    <h1>Lista de produtos</h1>
+    <table border="2px">
+        <tbody>
+            <% for (i=0; i< carrinho.length; i++){ %>
+                <tr>
+                    <td> <%=carrinho[i]%></td>
+                </tr>
+              <% }; %>
+        </tbody>
+    </table>
 
     
 </body>

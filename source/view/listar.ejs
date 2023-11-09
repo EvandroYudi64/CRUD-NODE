@@ -22,7 +22,10 @@
             <td><%= lista.rows[i].qtde %></td>
             <td>
               <form action="/carrinho" method="post">
-                <input type="hidden" name="txtcodigo" value="<%= lista.rows[i].codigo%>">
+                <input type="hidden" name="txtCodigo" value="<%= lista.rows[i].codigo%>">
+                <input type="hidden" name="txtDescricao" value="<%= lista.rows[i].descricao%>">
+                <input type="hidden" name="txtPreco" value="<%= lista.rows[i].preco%>">
+                <input type="hidden" name="txtQuantidade" value="<%= lista.rows[i].qtde%>">
                 <input type="submit" value="+"></input>
               </form>
             </td>

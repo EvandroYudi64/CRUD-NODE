@@ -5,7 +5,7 @@ const path = require('path');
 
 const Produto = require("../CRUD-NODE/source/model/Produto");
 const DAO = require("../CRUD-NODE/source/controller/ProdutoDAO");
-
+let carrinho = [];
 app.use(bodyparse.json());
 app.use(bodyparse.urlencoded({extends:true}));
 app.use(express.static(path.join(__dirname,"./css/styles.css")));
@@ -81,14 +81,19 @@ app.post("/cadastro", async function(req,res){
 });
 
 //rota carrinho
-const app2 = new express();
 app.post('/carrinho', function(req,res){
     let codigo = 0;
-    
+    let descricao ="";
+    let preco = 0;
+    let qtde = 0;
     try{
-        codigo = parseInt(req.body.txtcodigo);
-        console.log(req.body.txtcodigo);
-        res.render("mostra", {codigo:codigo})
+        codigo = parseInt(req.body.txtCodigo);
+        descricao = req.body.txtDescricao;
+        preco = parseFloat(req.body.txtPreco);
+        qtde = parseInt(req.body.txtQuantidade);
+        const prodAtual = [codigo,descricao,preco,qtde];
+        carrinho.push(prodAtual);
+        res.render("mostra", {codigo:codigo,descricao:descricao,preco:preco,qtde:qtde,carrinho:carrinho})
     }catch(err){
         console.log("ERRo"+err);
     }
