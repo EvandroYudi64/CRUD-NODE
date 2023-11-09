@@ -81,10 +81,18 @@ app.post("/cadastro", async function(req,res){
 });
 
 //rota carrinho
-
-//app.post('/carrinho', Function(req,res)=>{
-
-//});
+const app2 = new express();
+app.post('/carrinho', function(req,res){
+    let codigo = 0;
+    
+    try{
+        codigo = parseInt(req.body.txtcodigo);
+        console.log(req.body.txtcodigo);
+        res.render("mostra", {codigo:codigo})
+    }catch(err){
+        console.log("ERRo"+err);
+    }
+});
 ///
 
 app.listen(3000, function(err){

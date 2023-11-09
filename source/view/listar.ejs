@@ -21,9 +21,9 @@
             <td><%= lista.rows[i].preco %></td>
             <td><%= lista.rows[i].qtde %></td>
             <td>
-              <form action="carrinho" method="post">
-                <input type="hidden" name="" value="<%= lista.rows[i].codigo%>">
-                <button type="submit"> + </button>
+              <form action="/carrinho" method="post">
+                <input type="hidden" name="txtcodigo" value="<%= lista.rows[i].codigo%>">
+                <input type="submit" value="+"></input>
               </form>
             </td>
           </tr>
