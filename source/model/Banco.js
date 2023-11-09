@@ -9,7 +9,7 @@ class Banco {
         port: 5432,
         database: 'TOCC8',
         user: 'postgres',
-        password: '',
+        password: 'root',
       });
       this.conexao.connect();
     }

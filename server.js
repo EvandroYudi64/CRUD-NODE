@@ -3,8 +3,8 @@ const app = new express();
 const bodyparse = require('body-parser');
 const path = require('path');
 
-const Produto = require("../exemplo1/source/model/Produto");
-const DAO = require("../exemplo1/source/controller/ProdutoDAO");
+const Produto = require("../CRUD-NODE/source/model/Produto");
+const DAO = require("../CRUD-NODE/source/controller/ProdutoDAO");
 
 app.use(bodyparse.json());
 app.use(bodyparse.urlencoded({extends:true}));
