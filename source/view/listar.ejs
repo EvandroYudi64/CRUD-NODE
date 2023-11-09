@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lista</title>
+</head>
+<style>
+    td{
+        padding: 20px;
+    }
+</style>
+<body>
+    <h1>Lista de produtos</h1>
+    <table border="2px">
+      <tbody>
+        <% for (i=0; i< lista.rowCount; i++){ %>
+          <tr>
+            <td><%= lista.rows[i].codigo %></td>
+            <td><%= lista.rows[i].descricao %></td>
+            <td><%= lista.rows[i].preco %></td>
+            <td><%= lista.rows[i].qtde %></td>
+            <td>
+              <form action="carrinho" method="post">
+                <input type="hidden" name="" value="<%= lista.rows[i].codigo%>">
+                <button type="submit"> + </button>
+              </form>
+            </td>
+          </tr>
+        <% }; %>
+      </tbody>
+    </table>
+</body>
+</html>

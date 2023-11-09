@@ -17,7 +17,7 @@ app.set('views', path.join(__dirname+"/source/view"));//pasta com os arq ejs
 
 
 //primeira rota
-app.get("/", function(re,res){
+app.get("/", function(req,res){
     res.sendFile(__dirname+"/index.html");
 })
 
@@ -38,6 +38,8 @@ app.post("/cadastro", async function(req,res){
         console.log("ERRo"+err);
     }
     */
+   var lista;
+   var a ="";
     const produto = new Produto();
     const dao = new DAO();
     const botao = req.body.b1;
@@ -64,11 +66,12 @@ app.post("/cadastro", async function(req,res){
           produto.codigo = req.body.txtCodigo;
           dao.remover(produto);
           break;
-        /*
+
         case 'listar':
           await dao.listar();
+          listaprod = dao.tabela;
+          res.render("listar", {lista: listaprod})
           break;
-          */
       }
   
     }
@@ -79,7 +82,9 @@ app.post("/cadastro", async function(req,res){
 
 //rota carrinho
 
+//app.post('/carrinho', Function(req,res)=>{
 
+//});
 ///
 
 app.listen(3000, function(err){

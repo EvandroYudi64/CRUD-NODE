@@ -9,6 +9,7 @@ class ProdutoDAO {
         obj.qtde])
         .then(resposta => {
           this.codigo = resposta.rows[0].codigo;
+          console.error("Salvo com sucesso; ");
           return (resposta.rows[0].codigo);
         })
         .catch(e => {
