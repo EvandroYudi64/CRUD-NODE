@@ -3,64 +3,69 @@
 <head>
     <meta charset="UTF-8" />
     <title> Produtos </title>
-    <link rel="stylesheet" type="text/css" href="./css/style.css">
+    <!--<link rel="stylesheet" type="text/css" href="css/style.css"> !-->
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f8f9fa;
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        h1 {
+            text-align: center;
+            color: #007bff;
+        }
+
+        .form {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            max-width: 600px;
+            margin: 20px auto;
+            padding: 20px;
+            border: 1px solid #ced4da;
+            border-radius: 10px;
+            background-color: #fff;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .campo {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            box-sizing: border-box;
+        }
+
+        .botao {
+            display: inline-block;
+            background-color: #007bff;
+            color: #fff;
+            padding: 10px 20px;
+            text-decoration: none;
+            border-radius: 5px;
+            cursor: pointer;
+            border: none;
+        }
+
+        .botao:hover {
+            background-color: #0056b3;
+        }
+    </style>
 </head>
-<style>
-.campo{
-    width: 100%;
-    padding: 10px;
-    align-items: center;
-    text-align: center;
-    margin-bottom: 10px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    
-}
-
-.botao {
-    margin-top: 20px;
-    display: inline-block;
-    background-color: #007bff;
-    color: #fff;
-    padding: 10px 20px;
-    text-decoration: none;
-    border-radius: 5px;
-    cursor: pointer;
-}
-.form{
-    display: flex;
-    flex-direction: column;
-    margin:0 auto;
-    max-width: 600px;
-    align-items: center;
-    border: 1px solid rgb(190, 189, 189);
-    border-radius: 20px;
-    padding: 10px;
-}
-h1 {
-    font-size: 24px;
-    color: #333;
-}
-body{
-    background-color: #ffffff2a;
-}
-.container {
-    display: flex;
-    justify-content: center;
-
-}
-</style>
 <body>
-    <h1 style="text-align: center;">ROCK!</h1>
     <div class="form">
         <form action="cadastro" method="post">
-            CÓDIGO:<br>
+            Código:<br>
             <input class="campo" type="text" id="codigo" name="txtCodigo" /> <br />
-            DESCRIÇÂO:<br>
+            Descrição:<br>
             <input class="campo" type="text" id="descricao" name="txtDescricao"/> <br />
-            PREÇO:<br>
+            Preço:<br>
             <input class="campo" type="text" id="preco" name="txtPreco"/> <br /><br />
-            QUANTIDADE:<br>
+            Quantidade:<br>
             <input class="campo" type="text" id="qtde" name="txtQuantidade"/> <br /><br />
             <input type="submit" class="botao" name="b1" value="Gravar" ></input>
             <input type="submit" class="botao" name="b1" value="Alterar"></input>
