@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8" />
+    <title> Produtos </title>
+    <link rel="stylesheet" type="text/css" href="./css/style.css">
+</head>
+<style>
+.campo{
+    width: 100%;
+    padding: 10px;
+    align-items: center;
+    text-align: center;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    
+}
+
+.botao {
+    margin-top: 20px;
+    display: inline-block;
+    background-color: #007bff;
+    color: #fff;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+.form{
+    display: flex;
+    flex-direction: column;
+    margin:0 auto;
+    max-width: 600px;
+    align-items: center;
+    border: 1px solid rgb(190, 189, 189);
+    border-radius: 20px;
+    padding: 10px;
+}
+h1 {
+    font-size: 24px;
+    color: #333;
+}
+body{
+    background-color: #ffffff2a;
+}
+.container {
+    display: flex;
+    justify-content: center;
+
+}
+</style>
+<body>
+    <h1 style="text-align: center;">ROCK!</h1>
+    <div class="form">
+        <form action="cadastro" method="post">
+            CÓDIGO:<br>
+            <input class="campo" type="text" id="codigo" name="txtCodigo" /> <br />
+            DESCRIÇÂO:<br>
+            <input class="campo" type="text" id="descricao" name="txtDescricao"/> <br />
+            PREÇO:<br>
+            <input class="campo" type="text" id="preco" name="txtPreco"/> <br /><br />
+            QUANTIDADE:<br>
+            <input class="campo" type="text" id="qtde" name="txtQuantidade"/> <br /><br />
+            <input type="submit" class="botao" name="b1" value="Gravar" ></input>
+            <input type="submit" class="botao" name="b1" value="Alterar"></input>
+            <input type="submit" class="botao" name="b1" value="Remover"></input>
+            <input type="submit" class="botao" name="b1" value="Listar"></input>
+        </form>
+    </div>
+</body>
+
+</html>
